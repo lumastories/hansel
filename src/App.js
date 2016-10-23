@@ -2,21 +2,7 @@ import React, { Component } from 'react';
 import logo from '../public/logo.png';
 import './App.css';
 
-class Login extends Component {
-  // TODO: Move this to seperate file/folder? What structure should I use?
-  // TODO: How should I reason about the "composibility" of 
-  // these Components while taking routes into consideration?
-
-  render() {
-    return (
-      <div className="Login">
-        <input type="text" placeholder="username"/><br/>
-        <input type="password" placeholder="password"/><br/>
-        <input type="submit" value="login"/>
-      </div>
-    );
-  }
-}
+import {Login, Foo, Bar} from './Components.js'
 
 class App extends Component {
   render() {
@@ -26,7 +12,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <Login />
-        
+        <Foo />
+        <Bar />
+
       </div>
     );
   }
