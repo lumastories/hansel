@@ -1,21 +1,23 @@
-.App {
-  text-align: center;
+.Login input {
+  padding: 5px;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.Login {
+  padding: 20px;
+  background:#eee;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 50s linear;
+  /*animation: App-logo-spin infinite 50s linear;*/
   height: 80px;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
   padding: 20px;
   color: white;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 @keyframes App-logo-spin {
