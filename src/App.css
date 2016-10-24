@@ -1,7 +1,12 @@
+.footer {
+  color:white;
+  background-color: #666;
+  padding:5px;
+}
+
 .Login {
   padding: 25px;
   background:#eee;
-  
 }
 
 .Login input {
