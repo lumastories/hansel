@@ -1,23 +1,42 @@
-.Login input {
-  padding: 5px;
-  margin: 5px;
-  font-size: 1em;
+.Login {
+  padding: 25px;
+  background:#eee;
+  
 }
 
-.Login {
-  padding: 20px;
-  background:#eee;
+.Login input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border:2px solid #ccc;
+  font-size: 1em;
+  max-width: 100%;
+}
+
+.Login .button {
+  border:1px solid #ff33cc;
+  background:#ff33cc;
+  color:#fff;
+  cursor:pointer;
+  padding:10px;
+  text-transform: uppercase;
 }
 
 .App-logo {
   /*animation: App-logo-spin infinite 50s linear;*/
-  height: 80px;
+  /*height: 80px;*/
+  /*max-width: 100%;*/
+}
+
+.App {
+  max-width: 900px;
+  margin: 0px auto;
 }
 
 .App-header {
-  background-color: #222;
-  padding: 20px;
+  background-color: #666;
+  padding: 25px;
   color: white;
+  font-size: 2em;
 }
 
 @keyframes App-logo-spin {
