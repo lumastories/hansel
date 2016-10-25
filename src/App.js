@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-// import { Router, Route, Link } from 'react-router'
+
 
 import './App.css';
-import {Login, Footer} from './Components.js'
+import {Navigation, Footer} from './Components.js'
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +14,6 @@ class App extends Component {
     }
   }
   componentDidMount(){
-    // overrides base class method, sets state
     axios.get('/auth/')
     .then((resp) => {
       this.setState({data: JSON.stringify(resp.data), isLoading:false})
@@ -26,12 +25,9 @@ class App extends Component {
         <div className="App-header">
           HANSEL
         </div>
-        {
-          (this.state.isLoading) ? 'loading...' : <p>{this.state.data}</p>
-        }
-        <Login />
+        <Navigation />
+        {this.props.children}
         <Footer />
-
       </div>
     );
   }
