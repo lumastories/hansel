@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import NavLink from './Navigation'
+import {NavLink} from './Navigation'
 
 export class Kids extends Component {
   render() {
