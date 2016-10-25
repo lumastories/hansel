@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Kids extends Component {
+export class KidList extends Component {
   render() {
     return (
       <div>
@@ -12,7 +12,7 @@ export class Kids extends Component {
   }
 }
 
-export class Kid extends Component {
+export class KidDetail extends Component {
   render() {
     return (<div><p>a kid #{this.props.params.id}</p></div>)
   }
