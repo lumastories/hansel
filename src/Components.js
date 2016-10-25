@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export class Footer extends Component { 
   render() { 
@@ -24,6 +25,16 @@ export class Login extends Component {
 
   handleSubmit(event) {
     // if function is not .bind() above, it would look at "this" for the function not the class
+    axios.post('/auth/login/', {username: this.state.username, password: this.state.password})
+    .then((resp) => {
+      console.log(resp)
+      let auth_token = resp.data.auth_token
+      console.log(auth_token)
+      // this.setState({luke: resp.data, isLoading:false})
+    })
+    .catch((error) => {
+      console.log(`oopsy: ${error}`)
+    })
   }
   
   render() {

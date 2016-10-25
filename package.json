@@ -20,5 +20,5 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "https://swapi.co"
+  "proxy": "https://lumaa.co"
 }
