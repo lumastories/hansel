@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 
 import {Navigation} from './Components/Navigation'
-// import Footer from './Components/Footer'
+import {Footer} from './Components/Footer'
 
 class App extends Component {
   constructor(props) {
@@ -20,8 +20,9 @@ class App extends Component {
         </div>
         <Navigation />
         {this.props.children}
+        <Footer />
       </div>
-    );
+    )
   }
 }
 

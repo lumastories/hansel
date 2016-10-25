@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import App from './App'
 import Home from './Components/Home'
-import Login from './Components/Login'
+import {Login} from './Components/Login'
 import {Kid, Kids} from './Components/Kids'
 
 import './index.css'
