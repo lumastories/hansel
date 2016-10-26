@@ -28,6 +28,7 @@ describe('maths', () => {
   it('can add', () => {
     expect(1+2).toBe(3)
     expect(1+2).not.toBeLessThan(0)
+    expect(3+2).toBe(5)
   })
 
   it('can subtract', () => {
