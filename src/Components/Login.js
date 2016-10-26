@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import browserHistory from 'react-router'
+import {browserHistory} from 'react-router'
 import axios from 'axios'
 
 export class Login extends Component {
@@ -19,11 +19,12 @@ export class Login extends Component {
   handleSubmit(event) {
     axios.post('/auth/login/', {username: this.state.username, password: this.state.password})
     .then((resp) => {
-      this.setState({auth_token: resp.data.auth_token})
+      axios.defaults.headers.common['Authorization'] = `Token ${resp.data.auth_token}`
       browserHistory.push('/kids')
     })
     .catch((error) => {
-      this.setState({badLogin: 'Incorrect login. Try again.'})
+      console.log(error)
+      this.setState({badLogin: 'There was an error.'})
     })
   }
   

@@ -13,7 +13,6 @@ export class Navigation extends Component {
       <div>
         <nav>
           <NavLink to='/' onlyActiveOnIndex={true}>Home</NavLink>
-          <NavLink to='/login'>Login</NavLink>
           <NavLink to='/kids'>Kids</NavLink>
         </nav>
       </div>

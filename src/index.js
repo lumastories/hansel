@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import App from './App'
-import Home from './Components/Home'
 import {Login} from './Components/Login'
 import {KidList, KidDetail} from './Components/Kids'
 
@@ -12,8 +11,7 @@ import {Router, Route, browserHistory, IndexRoute} from 'react-router'
 ReactDOM.render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
-      <Route path="/login" component={Login}/>
+      <IndexRoute component={Login}/>
       <Route path="/kids" component={KidList} >
         <Route path="/kids/:id" component={KidDetail}/>
       </Route>
