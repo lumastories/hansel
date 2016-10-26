@@ -1,3 +1,18 @@
+nav {
+  padding:10px;
+}
+
+nav * {
+  margin: 5px;
+  
+  background: #abddff;
+  color: navy;
+  text-decoration: none;
+  text-transform: lowercase;
+  padding:3px;
+  border-radius: 2px;
+}
+
 .footer {
   color:white;
   background-color: #666;
@@ -5,7 +20,8 @@
 }
 
 .active {
-  color:green;
+  font-weight: bold;
+  background: #abfdef;
 }
 
 .Login {

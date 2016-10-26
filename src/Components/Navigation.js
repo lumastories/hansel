@@ -14,6 +14,8 @@ export class Navigation extends Component {
         <nav>
           <NavLink to='/' onlyActiveOnIndex={true}>Home</NavLink>
           <NavLink to='/kids'>Kids</NavLink>
+          <NavLink to='/settings'>settings</NavLink>
+          <NavLink to='/things'>things</NavLink>
         </nav>
       </div>
     )
