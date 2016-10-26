@@ -1,10 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App, { Login } from './App'
+import App from './App'
+import {Login} from './Components/Login'
+import {KidList} from './Components/Kids'
+import { shallow } from 'enzyme'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(<App />, div)
+})
+
+describe('app', () => {
+  it('login has .Login and .button', () => {
+    const wrapper = shallow(<Login />)
+    expect(wrapper.find('.Login').length).toEqual(1)
+    expect(wrapper.find('.button').length).toEqual(1)
+  })
+  it('kids view says Kids', () => {
+    const wrapper = shallow(<KidList />)
+    const title = <h2>Kids</h2>
+    expect(wrapper.contains(title)).toEqual(true);
+  })
 })
 
 describe('maths', () => {
