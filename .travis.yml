@@ -1,7 +1,13 @@
 dist: trusty
 language: node_js
 node_js:
-  - 4
+  - 6
 cache:
   directories:
   - node_modules
+notifications:
+  slack:
+    on_success: always
+    rooms:
+      - lumas:O4OT9JDz0oR0zchHEyasTVbp#general
+    
