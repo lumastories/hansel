@@ -1,4 +1,4 @@
-![](https://travis-ci.org/lumastories/web-hansel.svg?branch=master)
+![](https://travis-ci.org/lumastories/hansel.svg?branch=master)
 
 
 
