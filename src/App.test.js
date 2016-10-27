@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import {Login} from './Components/Login'
+import {Login} from './Components/Auth'
 import {KidList} from './Components/Kids'
 import { shallow } from 'enzyme'
 
