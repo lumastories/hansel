@@ -10,14 +10,9 @@ export class Login extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  componentDidMount(){
-    let token = localStorage.getItem('token')
-    if(token){
-      axios.defaults.headers.common['Authorization'] = `Token ${token}`
-      axios.get('/auth/me/')
-      .then((resp) => {
-        browserHistory.push('/kids')
-      })
+  componentWillMount(){
+    if(axios.defaults.headers.common['Authorization']) {
+      browserHistory.push('/kids')
     }
   }
 
@@ -61,6 +56,7 @@ export class Login extends Component {
 export class Logout extends Component {
     componentWillMount () {
       localStorage.removeItem('token')
+      axios.defaults.headers.common['Authorization'] = ''
       browserHistory.push('/')
     }
     render () {return null}

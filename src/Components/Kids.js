@@ -11,11 +11,12 @@ export class KidList extends Component {
     }
   }
   componentDidMount(){
-    lock()
-    axios.get('/api/participant')
-    .then((resp) => {
-      this.setState({kids: resp.data})
-    })
+    if(lock()){
+      axios.get('/api/participant')
+      .then((resp) => {
+        this.setState({kids: resp.data})
+      })
+    }
   }
   render() {
     return (

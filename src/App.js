@@ -19,7 +19,7 @@ class App extends Component {
           HANSEL
         </div>
         <Navigation />
-        {this.props.children}
+          {this.props.children}
         <Footer />
       </div>
     )
