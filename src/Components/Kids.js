@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {lock} from './Auth'
-
+import {Table} from 'reactable'
 
 export class KidList extends Component {
   constructor(){
@@ -14,14 +14,14 @@ export class KidList extends Component {
     lock()
     axios.get('/api/participant')
     .then((resp) => {
-      this.setState({kids: JSON.stringify(resp.data)})  
+      this.setState({kids: resp.data})
     })
   }
   render() {
     return (
       <div>
         <h2>Kids</h2>
-        {this.state.kids}
+        <Table className="table" data={this.state.kids} />
       </div>
     )
   }
