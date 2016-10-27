@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {lock} from './Auth'
+
 
 export class KidList extends Component {
   constructor(){
@@ -9,6 +11,7 @@ export class KidList extends Component {
     }
   }
   componentDidMount(){
+    lock()
     axios.get('/api/participant')
     .then((resp) => {
       this.setState({kids: JSON.stringify(resp.data)})  

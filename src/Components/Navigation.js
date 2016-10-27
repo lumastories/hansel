@@ -8,10 +8,8 @@ export class Navigation extends Component {
     return (
       <div>
         <nav>
-          <NavLink to='/' onlyActiveOnIndex={true}>Home</NavLink>
-          <NavLink to='/kids'>Kids</NavLink>
-          <NavLink to='/settings'>settings</NavLink>
-          <NavLink to='/things'>things</NavLink>
+          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/logout'>logout</NavLink>
         </nav>
       </div>
     )

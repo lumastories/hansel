@@ -57,3 +57,15 @@ export class Login extends Component {
     )
   }
 }
+
+export class Logout extends Component {
+    componentWillMount () {
+      localStorage.removeItem('token')
+      browserHistory.push('/')
+    }
+    render () {return null}
+}
+
+export const lock = () => localStorage.getItem('token') ? true : browserHistory.push('/')
+
+
